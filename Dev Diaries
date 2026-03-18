@@ -1,0 +1,34 @@
+Marvenly — CTF Write-up
+"We have just launched a website developed by a freelance developer. The source code was not shared with us, and the developer has since disappeared without handing it over. Despite this, traces of the development process and earlier versions of the website may still exist online. You are only given the website's primary domain as a starting point: marvenly.com"
+
+From "development process traces"
+my first thought was GitHub — so I searched marvenly and Voila! found it!
+
+
+
+What is the subdomain where the development version of the website is hosted?
+I spent 15-20 minutes searching the whole internet for traces, found nothing. Later learned that to find subdomains you can use cert[.]sh and look for their certificates. Simple once you know it!
+
+What is the GitHub username of the developer?
+Just search the website name on Google with "github" and you'll find the repo.
+
+
+What is the developer's email address?
+New trick I learned today — the .patch method. After opening the specific commit, just append .patch to the URL:
+https://github.com/[username]/[repo]/commit/[hash].patch
+The email shows right up in there!
+
+
+
+What reason did the developer mention for removing the source code?
+Just go through the commit history. It's right there.
+
+
+
+What is the value of the hidden flag?
+Also in the commit history.
+
+
+
+AND VOILA ROOM COMPLETE!!
+(I don't even know why I'm writing this — the ones who read write-ups already know these tricks, and the ones who don't won't read write-ups kekeke)
